@@ -1,0 +1,894 @@
+/**
+Folha de estilo do site outlawgames
+@author João Andrade
+*/
+
+/* importar fontes */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Orbitron:wght@400..900&display=swap%22');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+/* variáveis globais */
+:root {
+    --vermelhoLayout: #B30000;
+    --brancoLayout: #ffffff;
+    --backgroundCard: #f1f3f1;
+    --cinzaText: #434343;
+    --pretoSombra: #000000;
+    --corzap: #25d366;
+}
+
+/* CSS RESET */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+
+}
+
+/* ------------LAYOUT------------ */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Oswald", sans-serif;
+    font-size: 1em;
+}
+
+.Container {
+    margin: 0 auto;
+    padding: 30px 15px 30px 15px;
+}
+
+.Flex,
+.FlexMenu {
+    display: flex;
+    justify-content: space-between;
+}
+
+.Flex {
+    flex-direction: column;
+}
+
+.FlexServices {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.FlexSection {
+    display: flex;
+    align-items: center;
+}
+
+#FlexSobre {
+    display: flex;
+    flex-direction: row;
+}
+
+#FlexSobre2 {
+    display: flex;
+    flex-direction: row;
+}
+
+/* Customização dos cards */
+
+.FlexCard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.Card {
+    margin-top: 30px;
+    width: 338px;
+    height: 520px;
+    background-color: var(--backgroundCard);
+    border: 1px solid var(--vermelhoLayout);
+    border-radius: 25px;
+    text-align: center;
+}
+
+.Card img {
+    border-radius: 25px 25px 0px 0px;
+}
+
+.Card h3 {
+    margin: 15px 30px 0px 30px;
+    font-size: 1.5em;
+}
+
+.Card p {
+    padding: 10px 10px 50px 15px;
+    text-align: center;
+    color: var(--cinzaText);
+    font-size: 1em;
+}
+
+
+.Button {
+    /* Botão do cartão */
+    text-decoration: none;
+    background-color: var(--vermelhoLayout);
+    color: var(--brancoLayout);
+    padding: 10px 90px;
+    border-radius: 25px;
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+.Button:hover {
+    /* Botão do cartão */
+    text-decoration: none;
+    background-color: var(--vermelhoLayout);
+    color: var(--brancoLayout);
+    padding: 10px 90px;
+    border-radius: 25px;
+    font-size: 1.4em;
+    font-weight: 700;
+}
+
+.Button2 {
+    /* Botão do banner */
+    text-decoration: none;
+    background-color: var(--brancoLayout);
+    color: var(--vermelhoLayout);
+    padding: 10px 90px;
+    border-radius: 25px;
+    font-size: 1.2em;
+    font-weight: 900;
+}
+
+.Buttonyt {
+    /* Botão do youtube */
+    text-decoration: none;
+    background-color: var(--brancoLayout);
+    color: var(--vermelhoLayout);
+    padding: 10px 60px;
+    border-radius: 25px;
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+.Buttonzap {
+    /* Botão do zap */
+    text-decoration: none;
+    background-color: var(--pretoSombra);
+    color: var(--corzap);
+    padding: 10px 60px;
+    border-radius: 25px;
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+.Container h2 {
+    text-align: center;
+}
+
+/* Topo */
+
+#topo {
+    position: fixed;
+    right: 10px;
+    bottom: 1px;
+    opacity: 0.7;
+}
+
+
+/* Smartphone portrait */
+/* Cabeçalho */
+header {
+    height: 90px;
+}
+
+#logo img {
+    width: 90px;
+    height: 90px;
+}
+
+#check {
+    display: none;
+}
+
+label {
+    font-size: 3em;
+    position: fixed;
+    top: 25px;
+    right: 3px;
+    color: rgba(67, 67, 67, 0.7);
+}
+
+nav ul {
+    position: fixed;
+    list-style: none;
+    background-color: rgba(60, 60, 60, 0.95);
+    height: 100vh;
+    top: 89px;
+    right: -70%;
+    /* estratégia para recolher o menu */
+    width: 60%;
+    transition: all 0.5s;
+}
+
+/* Ativar o checkbox referente ao ul (lista) */
+#check:checked~ul {
+    right: 0;
+}
+
+nav ul li {
+    border-bottom: 0.1px solid var(--pretoSombra);
+    text-align: center;
+    padding: 8px;
+}
+
+nav ul li a {
+    color: var(--vermelhoLayout);
+    text-decoration: none;
+    font-size: 1.3em;
+    font-weight: 900;
+}
+
+/* BANNER */
+main {
+    background: url(img/banner.jpg);
+    height: 40vh;
+    /* vh é altura da tela */
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+
+main h1 {
+    font-family: "Orbitron", sans-serif;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--brancoLayout);
+    font-size: 2em;
+}
+
+main h2 {
+    display: none;
+}
+
+.textbanner {
+    font-size: 3em;
+}
+
+/* RODAPÉ */
+footer {
+    background-color: var(--vermelhoLayout);
+    color: var(--brancoLayout);
+    text-align: center;
+    flex-direction: column;
+}
+
+#social {
+    margin-bottom: 10px;
+    flex-direction: column;
+}
+
+/* Customização da Section Serviços */
+#sectionServices {
+    background-color: var(--pretoSombra);
+}
+
+#sectionTitle {
+    text-align: center;
+}
+
+.TopicosSection img {
+    border-radius: 10px;
+    margin: 5px;
+}
+
+#sectionTitle h2 {
+    font-size: 1.4em;
+    margin-bottom: 15px;
+    color: var(--brancoLayout);
+}
+
+/* Customização da section youtube */
+#youtube {
+    background-color: var(--vermelhoLayout);
+    height: 260px;
+}
+
+#imagemyoutube {
+    display: none;
+}
+
+#textyoutube h2 {
+    font-size: 2.3em;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+#textyoutube p {
+    font-size: 1.2em;
+    margin-bottom: 25px;
+}
+
+#exclusivos {
+    color: var(--brancoLayout);
+}
+
+/* Customizando título h2 do container */
+.Container h2 {
+    font-size: 2em;
+}
+
+/* Customizando Página Sobre */
+
+/* Imagem Sobre */
+#imgsobre img {
+    height: 300px;
+    width: 300px;
+    border-radius: 150px;
+    margin-bottom: 20px;
+    border: solid var(--vermelhoLayout);
+}
+
+#imgsobre {
+    text-align: center;
+}
+
+/* Texto Sobre */
+
+#outlawtxt {
+    color: var(--vermelhoLayout);
+}
+
+#txtsobre h2 {
+    font-size: 1.9em;
+    margin-bottom: 20px;
+}
+
+
+#txtsobre p {
+    font-size: 1.1em;
+    margin-top: 10px;
+}
+
+/* img página ps4 */
+
+#imgps4 {
+    text-align: center;
+}
+
+#imgps4 img {
+    height: 250px;
+    width: 350px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+/* Section do sub-título da página ps4 */
+#txtcontent {
+    text-align: center;
+}
+
+#txtcontent h3 {
+    margin-bottom: 5px;
+    color: var(--vermelhoLayout);
+}
+
+#txtcontent p {
+    text-align: justify;
+    color: var(--cinzaText);
+    font-size: 1em;
+}
+
+/* Section texto dos serviços */
+.txtservicos {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-left: 30px;
+}
+
+.conteudoflex h4 {
+    font-size: 1.2em;
+    margin-left: 16px;
+    margin-bottom: 1px;
+}
+
+.conteudoflex p {
+    font-size: 1em;
+}
+
+.simbolo {
+    color: var(--vermelhoLayout);
+}
+
+/* Customização da section whatsapp */
+.zap {
+    background-color: var(--cinzaText);
+    height: 245px;
+}
+
+.spanzap {
+    color: var(--corzap);
+}
+
+.imagemzap {
+    display: none;
+}
+
+.textzap h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    text-align: left;
+    color: var(--brancoLayout);
+}
+
+.textzap p {
+    font-size: 1.2em;
+    margin-bottom: 25px;
+    color: var(--backgroundCard)
+}
+
+/* Minhas redes na página sobre */
+#mysocial h3 {
+    text-align: center;
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+#imggithub {
+    height: 92px;
+    width: 92px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#imglinkedin {
+    height: 80px;
+    width: 80px;
+    margin-left: 6px;
+}
+
+#mysocial p {
+    display: flex;
+    align-items: center;
+    margin-left: 12px;
+    font-size: 1em;
+}
+
+#mysocial span {
+    color: var(--vermelhoLayout);
+    font-weight: bolder;
+}
+
+/* Formatação do formulário */
+#formulario input[type="text"],
+#formulario input[type="email"],
+#formulario input[type="tel"],
+#formulario textarea {
+    margin-top: 7px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #cccccc;
+}
+
+#formulario input[type="submit"],
+#formulario input[type="reset"] {
+    background-color: var(--vermelhoLayout);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 1px;
+}
+
+#formulario input[type="reset"] {
+    background-color: var(--vermelhoLayout);
+}
+
+#formulario h2 {
+    text-align: center;
+    margin: 50px 0px 25px 0px;
+}
+
+#formulario form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Google Maps */
+#maps2 {
+    display: none;
+}
+
+#TitleMaps {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+/* Smartphone landscape */
+@media (min-width: 576px) {
+    /* Cabeçalho */
+
+    .Container {
+        max-width: 540px;
+    }
+
+    header {
+        max-width: 540px;
+        margin: auto;
+    }
+}
+
+.Flex {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* BANNER */
+main {
+    height: 65vh;
+}
+
+main h1 {
+    font-size: 1.7em;
+}
+
+#social {
+    margin-bottom: 0;
+}
+
+/* Tablet portrait */
+@media (min-width: 768px) {
+    .Container {
+        max-width: 720px;
+    }
+
+    /* Cabeçalho */
+    header {
+        max-width: 720px;
+        height: 145px;
+
+    }
+
+    label {
+        font-size: 5em;
+        top: 25px;
+        right: 5px;
+    }
+
+    #logo img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .textbanner {
+        font-size: 5em;
+    }
+
+    nav ul {
+        top: 145px;
+        right: -50%;
+        width: 50%;
+    }
+
+    nav ul li a {
+        font-size: 2.7em;
+    }
+
+    /* BANNER */
+    main h1 {
+        font-size: 2.3em;
+        font-weight: 600;
+        margin-bottom: 25px;
+    }
+
+    main h2 {
+        display: block;
+        font-size: 1.7em;
+        margin-bottom: 50px;
+        color: var(--brancoLayout);
+        text-shadow: var(--pretoSombra) 0.05em 0.05em 0.05em;
+    }
+
+
+    /* Section Serviços */
+
+    .TopicosSection img {
+        border-radius: 10px;
+        margin: 5px;
+    }
+
+    #sectionTitle h2 {
+        font-size: 2.2em;
+        margin-bottom: 20px;
+        color: var(--brancoLayout);
+    }
+
+    /* Customizando section youtube */
+
+    #youtube {
+        height: 285px;
+    }
+
+    #imagemyoutube {
+        display: block;
+    }
+
+    #imagemyoutube img {
+        height: 200px;
+        width: 200px;
+    }
+
+    #textyoutube h2 {
+        font-size: 2.9em;
+        margin-bottom: 10px;
+    }
+
+    #textyoutube p {
+        font-size: 1.6em;
+        margin-bottom: 25px;
+    }
+
+    /* Seção Sobre */
+    #txtsobre h2 {
+        font-size: 2.5em;
+    }
+
+    #txtsobre p {
+        font-size: 1.5em;
+    }
+
+    /* Section do sub-título da página ps4 */
+
+    #txtcontent h3 {
+        font-size: 1.7em;
+    }
+
+    #txtcontent p {
+        font-size: 1.4em;
+    }
+
+    /* img página ps4 */
+
+    #imgps4 h2 {
+        font-size: 2.5em;
+    }
+
+    #imgps4 img {
+        height: 400px;
+        width: 700px;
+    }
+
+    /* Customizando section youtube */
+
+
+    .textzap h2 {
+        font-size: 2.9em;
+        margin-bottom: 10px;
+    }
+
+    .textzap p {
+        font-size: 1.6em;
+        margin-bottom: 25px;
+    }
+
+    /* Minhas redes na página sobre */
+    #mysocial h3 {
+        text-align: center;
+        font-size: 1.5em;
+        margin-bottom: 10px;
+    }
+
+    #imggithub {
+        height: 120px;
+        width: 120px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    #imglinkedin {
+        height: 100px;
+        width: 100px;
+        margin-left: 10px;
+    }
+
+    #mysocial p {
+        display: flex;
+        align-items: center;
+        margin-left: 12px;
+        font-size: 1.2em;
+    }
+
+    #mysocial span {
+        color: var(--vermelhoLayout);
+        font-weight: bolder;
+    }
+
+
+}
+
+/* Tablet landscape */
+@media (min-width: 992px) {
+    .Container {
+        max-width: 960px;
+    }
+
+    header {
+        max-width: 960px;
+
+    }
+}
+
+/* PC ou Notebook ruim (HD-)*/
+@media (min-width: 1200px) {
+    .Container {
+        max-width: 1140px;
+    }
+
+    header {
+        max-width: 1140px;
+
+    }
+
+    label {
+        display: none;
+    }
+
+    nav ul {
+        position: static;
+        width: 100%;
+        height: auto;
+        background-color: var(--brancoLayout);
+        margin: 70px;
+    }
+
+    nav ul li {
+        border: 0;
+        float: left;
+    }
+
+    nav ul li a {
+        color: var(--pretoSombra);
+        font-size: 1.5em;
+    }
+
+    nav ul li a:hover {
+        color: var(--vermelhoLayout);
+    }
+
+
+    /* BANNER */
+    main {
+        height: 65vh;
+    }
+
+    main h1 {
+        font-size: 3em;
+    }
+
+    main h2 {
+        font-size: 1.5em;
+        text-shadow: var(--pretoSombra) 0.05em 0.05em 0.05em;
+    }
+
+    /* Customizando youtube */
+    #textyoutube h2 {
+        font-size: 3em;
+        margin-bottom: 10px;
+    }
+
+    #textyoutube p {
+        font-size: 1.6em;
+        margin-bottom: 25px;
+    }
+
+    #imagemyoutube img {
+        margin-left: 200px;
+        height: 220px;
+        width: 220px;
+    }
+
+    /* Seção Sobre */
+    #txtsobre h2 {
+        font-size: 2.5em;
+    }
+
+    #txtsobre p {
+        font-size: 1.1em;
+    }
+
+    /* Section do sub-título da página ps4 */
+
+    #txtcontent h3 {
+        font-size: 1.7em;
+    }
+
+    #txtcontent p {
+        font-size: 1.4em;
+
+    }
+
+    /* img página ps4 */
+
+    #imgps4 h2 {
+        font-size: 2.5em;
+    }
+
+    #imgps4 img {
+        height: 400px;
+        width: 700px;
+    }
+
+    /* Section texto dos serviços */
+    .txtservicos {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #txtcontent p {
+        text-align: center;
+
+    }
+
+    .conteudoflex {
+        margin-left: 230px;
+    }
+
+    /* Customizando zap */
+    .textzap h2 {
+        font-size: 3em;
+        margin-bottom: 10px;
+    }
+
+    .textzap p {
+        font-size: 1.6em;
+        margin-bottom: 25px;
+    }
+
+    .imagemzap {
+        display: block;
+    }
+
+    .imagemzap img {
+        margin-left: 600px;
+        height: 180px;
+        width: 180px;
+    }
+
+    /* Minhas redes na página sobre */
+    #mysocial h3 {
+        text-align: center;
+        font-size: 1.6em;
+        margin-bottom: 10px;
+    }
+
+    /* Google Maps */
+    #maps1 {
+        display: none;
+    }
+
+    #maps2 {
+        display: block;
+        margin-left: 310px;
+    }
+}
+
+/* PC ou Notebook ou Tv FULL HD+ */
+@media (min-width: 1400px) {
+    .Container {
+        max-width: 1360px;
+    }
+
+    header {
+        max-width: 1360px;
+
+    }
+
+}
